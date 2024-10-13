@@ -29,7 +29,7 @@ class ShoppingCartAppTest {
         try (MockedStatic<SpringApplication> springApplicationMockedStatic
                      = Mockito.mockStatic(SpringApplication.class)) {
             //Given
-            var args = new String[]{"p0", "p1"};
+            var args = new String[]{"p0", "p1", "p3"};
             springApplicationMockedStatic.when(()->SpringApplication.run(ShoppingCartApp.class, args))
                     .thenReturn(this.mockedConfigurableApplicationContext);
 
