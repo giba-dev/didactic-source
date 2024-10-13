@@ -3,7 +3,6 @@ package dev.giba.labs.acme.store.shoppingcart.service;
 import dev.giba.labs.acme.store.shoppingcart.model.Item;
 
 import java.math.BigDecimal;
-
 import java.util.Set;
 
 public interface ShoppingCartService {

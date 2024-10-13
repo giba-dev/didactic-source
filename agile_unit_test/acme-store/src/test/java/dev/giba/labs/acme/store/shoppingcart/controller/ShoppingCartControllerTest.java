@@ -1,8 +1,8 @@
 package dev.giba.labs.acme.store.shoppingcart.controller;
 
-import dev.giba.labs.acme.store.shoppingcart.model.ShoppingCart;
 import dev.giba.labs.acme.store.shoppingcart.model.Item;
 import dev.giba.labs.acme.store.shoppingcart.model.ProductEntity;
+import dev.giba.labs.acme.store.shoppingcart.model.ShoppingCart;
 import dev.giba.labs.acme.store.shoppingcart.service.ProductService;
 import dev.giba.labs.acme.store.shoppingcart.service.ShoppingCartService;
 import org.junit.jupiter.api.BeforeEach;
