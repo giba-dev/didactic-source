@@ -23,6 +23,7 @@ class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public void add(final Item item) {
+        this.items.removeIf(i -> i.productId() == item.productId());
         this.items.add(item);
     }
 

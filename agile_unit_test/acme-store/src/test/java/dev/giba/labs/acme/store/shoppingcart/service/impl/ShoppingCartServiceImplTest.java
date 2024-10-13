@@ -55,6 +55,21 @@ class ShoppingCartServiceImplTest {
     }
 
     @Test
+    @DisplayName("Deve adicionar item corretamente mesmo que ele já exista")
+    void shouldAddAnExistentItemCorrectly() {
+        //Given
+        var itemProduct1 = new Item(PRODUCT_1_ID, PRODUCT_1_DESCRIPTION, PRODUCT_1_QUANTITY, PRODUCT_1_PRICE);
+        var itemProduct1WithNewQuantity = itemProduct1.withQuantity(100);
+
+        //When
+        this.shoppingCartServiceImpl.add(itemProduct1);
+        this.shoppingCartServiceImpl.add(itemProduct1WithNewQuantity);
+
+        //Then
+        assertEquals(Set.of(itemProduct1WithNewQuantity), this.shoppingCartServiceImpl.getAll());
+    }
+
+    @Test
     @DisplayName("Deve retornar os itens corretamente")
     void shouldReturnItemsCorrectly(){
         //Given

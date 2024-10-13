@@ -21,7 +21,7 @@ public class ShoppingCartController {
         this.productService = productService;
     }
 
-    @GetMapping(value = "/my", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/my/items", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ShoppingCart> allItems() {
         return ResponseEntity.ok(new ShoppingCart(this.shoppingCartService.getAll(),
                 this.shoppingCartService.getSubTotal()));
