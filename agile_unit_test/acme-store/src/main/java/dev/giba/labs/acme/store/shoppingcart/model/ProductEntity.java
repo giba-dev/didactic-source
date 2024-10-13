@@ -18,10 +18,6 @@ public class ProductEntity {
     @Column(name = "price", nullable = false)
     private BigDecimal price;
 
-    public ProductEntity() {
-        //This constructor must be empty in order to use ORM
-    }
-
     public long getId() {
         return id;
     }
